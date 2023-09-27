@@ -1,12 +1,18 @@
 package com.example.users.controller;
 
+import com.example.users.model.User;
+import com.example.users.service.UserService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@RequiredArgsConstructor
 @RequestMapping(path = "/user")
 public class UserController {
+    private final UserService userService;
+
     /**
      * Создание нового user
      *
@@ -18,23 +24,18 @@ public class UserController {
         return userService.saveUser(user);
     }
 
-    @PatchMapping("/{id}")
-    public User updateUser(@PathVariable long id, @RequestBody User user) {
-        return userService.updateUser(id, user);
+    @PatchMapping("/{userId}")
+    public User updateUser(@PathVariable long userId, @RequestBody User user) {
+        return userService.updateUser(userId, user);
     }
 
-    @GetMapping("/{id}")
-    public User getUser(@PathVariable long id) {
-        return userService.getUser(id);
+    @GetMapping("/{userId}")
+    public User getUser(@PathVariable long userId) {
+        return userService.getUser(userId);
     }
 
-    @GetMapping
-    public List<User> getAllUsers() {
-        return userService.getAllUsers();
-    }
-
-    @DeleteMapping("/{id}")
-    public void deleteUser(@PathVariable long id) {
-        userService.deleteUser(id);
+    @DeleteMapping("/{userId}")
+    public void deleteUser(@PathVariable long userId) {
+        userService.deleteUser(userId);
     }
 }
