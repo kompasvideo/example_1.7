@@ -6,24 +6,37 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.*;
 import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
+import lombok.*;
 
 @JsonIgnoreProperties({"hibernateLazyInitializer"})
-@AllArgsConstructor
-@NoArgsConstructor
-@Data
+@Getter
+@Setter
+@Entity
+@ToString
 @Table(name = "users")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
 
     @NonNull
+    @Column(name = "username")
     private String name;
 
     @NonNull
+    @Column(name = "email")
     private String email;
+
+    public User() {
+        this.id = 0l;
+        this.name = "";
+        this.email = "";
+    }
+
+    public User(Long id, @NonNull String name, @NonNull String email) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+    }
 }

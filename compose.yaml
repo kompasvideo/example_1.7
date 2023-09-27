@@ -6,7 +6,7 @@ services:
     depends_on:
       - postgres
     environment:
-      - SPRING_DATASOURCE_URL=$jdbc:postgresql://postgres:5432/mydatabase
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/mydatabase
       - DB_NAME=mydatabase
       - POSTGRES_USER=myuser
       - POSTGRES_PASSWORD=secret
