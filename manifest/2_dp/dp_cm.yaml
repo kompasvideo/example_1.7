@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: otus-dp
+  labels:
+    app: otus-dp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      env: prod
+  template:
+    metadata:
+      labels:
+        env: prod
+    spec:
+      containers:
+      - name: otus-app
+        image: andrey1andrey/otus_1.7:latest
+        ports:
+        - containerPort: 8000
+        env:
+        - name: SPRING_DATASOURCE_URL
+          valueFrom:
+            configMapKeyRef:
+              name: otus-cm
+              key: spring_datasource_url
+        - name: DB_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: otus-cm
+              key: db_name
+        - name: POSTGRES_USER
+          valueFrom:
+            configMapKeyRef:
+              name: otus-cm
+              key: postgres_user
+        - name: POSTGRES_PASSWORD
+          valueFrom:
+            configMapKeyRef:
+              name: otus-cm
+              key: postgres_password

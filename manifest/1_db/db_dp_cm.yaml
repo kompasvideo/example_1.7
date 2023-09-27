@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: db-dp
+  labels:
+    app: db-dp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      env: db_prod
+  template:
+    metadata:
+      labels:
+        env: db_prod
+    spec:
+      containers:
+      - name: db-app
+        image: postgres:13.7-alpine
+        ports:
+        - containerPort: 5432
+        env:
+        - name: POSTGRES_DB
+          valueFrom:
+            configMapKeyRef:
+              name: db-cm
+              key: postgres_db
+        - name: POSTGRES_USER
+          valueFrom:
+            configMapKeyRef:
+              name: db-cm
+              key: postgres_user
+        - name: POSTGRES_PASSWORD
+          valueFrom:
+            configMapKeyRef:
+              name: db-cm
+              key: postgres_password

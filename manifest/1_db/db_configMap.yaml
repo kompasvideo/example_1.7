@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: db-cm
+data:
+  postgres_db: "mydatabase"
+  postgres_user: "myuser"
+  postgres_password: "secret"
