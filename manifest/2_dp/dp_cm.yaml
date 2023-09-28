@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: otus-app
-        image: andrey1andrey/otus_1.7:latest
+        image: andrey1andrey/otus17:latest
         ports:
         - containerPort: 8000
         env:
