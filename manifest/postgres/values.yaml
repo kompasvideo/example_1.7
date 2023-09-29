@@ -1,2 +1,4 @@
 echo '{primary.persistence.existingClaim=pg-pvc,auth.postgresPassword=secret}'
-export SERVICE_IP=$(kubectl get svc -
+export POSTGRES_DB=mydatabase
+export POSTGRES_PASSWORD=secret
+export POSTGRES_USER=myuser
