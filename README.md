@@ -1,4 +1,18 @@
 # otus_1.7
+1. манифесты в папке manifest
+    1_db - манифесты для устаеовки postgresql через helm
+    2_dp - манифесты для установки приложения
+2. установить БД postgresql по https://habr.com/ru/companies/domclick/articles/649167/становить 
+    установить starage.yaml, pv.yaml,pvc.yaml
+    helm install dev-pg -f values.yaml bitnami/postgresql
+    миграций нет
+    kubectl apply -f congigMap.yaml
+    kubectl apply -f ingress.yaml
+    kubectl apply -f service.yaml
+    kubectl apply -f dp_cm.yaml
+3. в папке postman
+4. 
+
 Простейший RESTful CRUD по созданию, удалению, просмотру и обновлению пользователей с манифестами для его разворачивания в kubernetes
 
 Описание/Пошаговая инструкция выполнения домашнего задания:
@@ -18,4 +32,4 @@ Ingress-ы должны также вести на url arch.homework/ (как и
 команда kubectl apply -f, которая запускает в правильном порядке манифесты кубернетеса
 Postman коллекция, в которой будут представлены примеры запросов к сервису на создание, получение, изменение и удаление пользователя. Важно: в postman коллекции использовать базовый url - arch.homework.
 Проверить корректность работы приложения используя созданную коллекцию newman run коллекция_постман и приложить скриншот/вывод исполнения корректной работы
-Задание со звездочкой:
+

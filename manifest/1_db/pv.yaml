@@ -13,7 +13,7 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   storageClassName: local-storage
   local:
-    path: /devkube/postgresql
+    path: /minikdevkube/postgresql
   nodeAffinity:
     required:
       nodeSelectorTerms:

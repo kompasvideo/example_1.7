@@ -1,4 +1,0 @@
-echo '{primary.persistence.existingClaim=pg-pvc,auth.postgresPassword=secret}'
-export POSTGRES_DB=mydatabase
-export POSTGRES_PASSWORD=secret
-export POSTGRES_USER=myuser
