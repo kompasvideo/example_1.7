@@ -3,7 +3,7 @@
     1_db - манифесты для устаеовки postgresql через helm
     2_dp - манифесты для установки приложения
 2. установить БД postgresql по https://dev.to/dm8ry/how-to-deploy-postgresql-db-server-and-pgadmin-in-kubernetes-a-how-to-guide-5fm0
-    установить postgres_configmap.yaml, pv.yaml,pvc.yaml
+    установить postgres_configmap.yaml, postgres_secret.yaml,postgres_dp.yaml
     helm install dev-pg -f values.yaml bitnami/postgresql
     миграций нет
     kubectl apply -f congigMap.yaml
