@@ -2,8 +2,8 @@
 1. манифесты в папке manifest
     1_db - манифесты для устаеовки postgresql через helm
     2_dp - манифесты для установки приложения
-2. установить БД postgresql по https://habr.com/ru/companies/domclick/articles/649167/становить 
-    установить starage.yaml, pv.yaml,pvc.yaml
+2. установить БД postgresql по https://dev.to/dm8ry/how-to-deploy-postgresql-db-server-and-pgadmin-in-kubernetes-a-how-to-guide-5fm0
+    установить postgres_configmap.yaml, pv.yaml,pvc.yaml
     helm install dev-pg -f values.yaml bitnami/postgresql
     миграций нет
     kubectl apply -f congigMap.yaml
