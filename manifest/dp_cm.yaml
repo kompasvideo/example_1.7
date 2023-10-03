@@ -25,18 +25,8 @@ spec:
             configMapKeyRef:
               name: otus-cm
               key: spring_datasource_url
-        - name: DB_NAME
+        - name: SPRING_DATASOURCE_PASSWORD
           valueFrom:
-            configMapKeyRef:
-              name: otus-cm
-              key: db_name
-        - name: POSTGRES_USER
-          valueFrom:
-            configMapKeyRef:
-              name: otus-cm
-              key: postgres_user
-        - name: POSTGRES_PASSWORD
-          valueFrom:
-            configMapKeyRef:
-              name: otus-cm
-              key: postgres_password
+            secretKeyRef:
+              name: otus-secret
+              key: password

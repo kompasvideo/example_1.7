@@ -1,0 +1,1 @@
+{primary.persistence.existingClaim=pg-pvc,auth.postgresPassword=password}
