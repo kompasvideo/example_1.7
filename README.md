@@ -10,7 +10,7 @@
 *   minikube tunnel
 *   kubectl apply -f dp_cm.yaml
 3. в папке postman
-4. ![](postman/Screenshot 2023-10-03 181552.png)
+4. ![](Screenshot%202023-10-03%20181552.png)
 
 Простейший RESTful CRUD по созданию, удалению, просмотру и обновлению пользователей с манифестами для его разворачивания в kubernetes
 
