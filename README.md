@@ -1,15 +1,16 @@
 # otus_1.7
 1. манифесты в папке manifest
 2. установить БД postgresql по https://dev.to/dm8ry/how-to-deploy-postgresql-db-server-and-pgadmin-in-kubernetes-a-how-to-guide-5fm0
-    helm install dev-pg -f values.yaml bitnami/postgresql
-    миграций нет
-    kubectl apply -f congigMap.yaml
-    kubectl apply -f ingress.yaml
-    kubectl apply -f service.yaml
-    kubectl apply -f secret.yaml
-    kubectl apply -f dp_cm.yaml
+*   helm install dev-pg -f values.yaml bitnami/postgresql
+*   миграций нет
+*   kubectl apply -f congigMap.yaml
+*   kubectl apply -f secret.yaml
+*   kubectl apply -f service.yaml
+*   kubectl apply -f ingress.yaml
+*   minikube tunnel
+*   kubectl apply -f dp_cm.yaml
 3. в папке postman
-4. 
+4. ![](postman/Screenshot 2023-10-03 181552.png)
 
 Простейший RESTful CRUD по созданию, удалению, просмотру и обновлению пользователей с манифестами для его разворачивания в kubernetes
 
