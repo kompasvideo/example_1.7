@@ -8,6 +8,7 @@
 *   kubectl apply -f service.yaml
 *   kubectl apply -f ingress.yaml
 *   minikube tunnel
+*   файл hosts    127.0.0.1 arch.homework
 *   kubectl apply -f dp_cm.yaml
 3. в папке postman
 4. ![](Screenshot%202023-10-03%20181552.png)
