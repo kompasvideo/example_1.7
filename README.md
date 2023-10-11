@@ -3,7 +3,7 @@
 2. установить БД postgresql по https://dev.to/dm8ry/how-to-deploy-postgresql-db-server-and-pgadmin-in-kubernetes-a-how-to-guide-5fm0
 *   helm install dev-pg -f values.yaml bitnami/postgresql
 *   миграций нет
-*   kubectl apply -f congigMap.yaml
+*   kubectl apply -f configMap.yaml
 *   kubectl apply -f secret.yaml
 *   kubectl apply -f service.yaml
 *   kubectl apply -f ingress.yaml
